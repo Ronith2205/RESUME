@@ -1,3 +1,129 @@
-function toggleDark() {
-  document.body.classList.toggle("dark");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f8f9fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.dark-btn {
+  border: none;
+  background: #eee;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* HEADER */
+header {
+  padding: 80px 60px;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.summary {
+  margin-top: 15px;
+  max-width: 650px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: white;
+  color: #0d6efd;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px;
+}
+
+.section-intro {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+/* SKILLS */
+.grid span {
+  background: white;
+  padding: 12px 18px;
+  margin: 8px;
+  display: inline-block;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #eeeeee;
+}
+
+/* DARK MODE */
+.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+.dark nav,
+.dark section,
+.dark .card {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark footer {
+  background: #1e1e1e;
+}
+
+.dark a {
+  color: #9ecbff;
 }
