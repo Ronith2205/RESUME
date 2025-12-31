@@ -1,162 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ronith Reddy Revuri | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav>
-  <h2>Ronith</h2>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <button class="dark-btn" onclick="toggleDark()">🌙</button>
-  </div>
-</nav>
+  <!-- Navbar -->
+  <header>
+    <h1 class="logo">Ronith</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Ronith Reddy Revuri</h1>
-  <p class="subtitle">
-    Undergraduate | CSE (AI & ML) | Python • Java | Tech & Finance Enthusiast
-  </p>
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Ronith Reddy Revuri</h2>
+    <p class="subtitle">
+      Undergraduate | CSE (AI & ML) <br>
+      Python • Java • Tech & Finance Enthusiast
+    </p>
+    <a class="btn" href="#" download>Download CV</a>
+  </section>
 
-  <p class="summary">
-    I am a third-year undergraduate student specializing in Artificial
-    Intelligence and Machine Learning. With strong skills in Python and
-    Java, a growing interest in finance, and an entrepreneurial mindset,
-    I aim to build scalable and impactful digital solutions.
-  </p>
+  <!-- About -->
+  <section id="about">
+    <h3>About Me</h3>
+    <p>
+      I am a third-year undergraduate specializing in Artificial Intelligence and Machine Learning.
+      I have a strong foundation in Python and Java, along with experience in real-world projects.
+      I am also deeply interested in finance and problem-solving.
+    </p>
+  </section>
 
-  <a href="Ronith_Reddy_Resume.pdf" class="btn" download>Download CV</a>
-</header>
+  <!-- Skills -->
+  <section id="skills">
+    <h3>Core Skills</h3>
+    <div class="skills">
+      <span>Python</span>
+      <span>Java</span>
+      <span>AI</span>
+      <span>Machine Learning</span>
+      <span>HTML & CSS</span>
+      <span>JavaScript</span>
+      <span>Git & GitHub</span>
+      <span>Finance Basics</span>
+    </div>
+  </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am an undergraduate student from the Computer Science and Engineering
-    department with a specialization in Artificial Intelligence and Machine
-    Learning. My academic journey has helped me build a strong foundation
-    in Python and Java while working on practical, real-world projects.
-  </p>
-  <p>
-    Alongside technology, I am deeply interested in finance and business.
-    I am actively working towards becoming an aspiring entrepreneur by
-    combining technical skills, creativity, and business thinking.
-  </p>
-</section>
+  <!-- Projects -->
+  <section id="projects">
+    <h3>Projects</h3>
 
-<section id="skills">
-  <h2>Core Skills</h2>
-  <div class="grid">
-    <span>Python</span>
-    <span>Java</span>
-    <span>Artificial Intelligence</span>
-    <span>Machine Learning</span>
-    <span>HTML & CSS</span>
-    <span>JavaScript</span>
-    <span>Problem Solving</span>
-    <span>Finance Fundamentals</span>
-    <span>Git & GitHub</span>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="cards">
-
-    <div class="card">
-      <h3>AI Karaoke Maker</h3>
+    <div class="project">
+      <h4>AI Karaoke Maker</h4>
       <p>
-        Developed an AI-based karaoke system that performs audio separation,
-        lyric transcription, and precise lyric synchronization to generate
-        professional karaoke-style videos.
+        AI-based system for audio separation, lyric transcription,
+        and precise lyric synchronization to generate karaoke videos.
       </p>
     </div>
 
-    <div class="card">
-      <h3>Autism Detection System</h3>
+    <div class="project">
+      <h4>Autism Detection System</h4>
       <p>
-        Built a machine learning system to detect autism-related traits
-        from behavioral patterns, supporting early awareness and
-        data-driven insights.
+        Machine learning system to detect autism-related traits
+        using behavioral pattern analysis.
       </p>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Contact -->
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:ronithreddy2205@gmail.com">ronithreddy2205@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Ronith2205" target="_blank">github.com/Ronith2205</a></p>
+    <p>LinkedIn: <a href="#" target="_blank">View Profile</a></p>
+  </section>
 
-<section id="services">
-  <h2>Entrepreneurial Journey & Services</h2>
-  <p class="section-intro">
-    These services represent my journey toward building a sustainable
-    entrepreneurship venture by solving real-world problems for
-    individuals and businesses.
-  </p>
+  <footer>
+    <p>© 2025 Ronith Reddy Revuri</p>
+  </footer>
 
-  <div class="cards">
-
-    <div class="card">
-      <h3>Resume & CV Websites</h3>
-      <p>
-        ATS-friendly resumes and modern CV websites for students and
-        professionals.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Website Development</h3>
-      <p>
-        Personal, portfolio, and business websites with clean design and
-        responsive layouts.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Poster & Digital Design</h3>
-      <p>
-        Marketing posters and social media creatives to enhance online
-        presence.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Business Support</h3>
-      <p>
-        Invoice generation and digital setup solutions for small
-        businesses and startups.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <strong>ronithreddy2205@gmail.com</strong></p>
-  <p>
-    GitHub:
-    <a href="https://github.com/Ronith2205" target="_blank">
-      github.com/Ronith2205
-    </a>
-  </p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/ronith-reddy-revuri-75290a314" target="_blank">
-      View Profile
-    </a>
-  </p>
-</section>
-
-<footer>
-  <p>© 2025 Ronith Reddy Revuri</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
