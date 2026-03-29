@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ronith Reddy | AI & ML Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+    body {
+      background: linear-gradient(120deg, #0f172a, #1e293b);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 { font-size: 3rem; }
+    header span { color: #22c55e; }
+
+    .typing {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #22c55e;
+      color: black;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #16a34a; }
+
+    section {
+      padding: 60px 10%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 0.8s ease;
+    }
+
+    section.show { opacity: 1; transform: translateY(0); }
+
+    h2 {
+      margin-bottom: 20px;
+      border-left: 5px solid #22c55e;
+      padding-left: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 15px;
+      background: #22c55e;
+      color: black;
+      border-radius: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s;
+      border: 1px solid #1f2937;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Hi, I'm <span>Ronith Reddy</span></h1>
+  <div class="typing" id="typing"></div>
+  <button class="btn" onclick="scrollToSection()">Explore</button>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a B.Tech AIML student focused on Artificial Intelligence, Machine Learning, . I enjoy building impactful real-world applications using intelligent systems.</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>Python</span>
+    <span>SQL</span>
+    <span>Machine Learning</span>
+    <span>AI</span>
+    <span>Cyber Security</span>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>AI Karaoke Maker</h3>
+      <p>Developed an AI-based system for vocal removal, transcription, and lyric synchronization using advanced ML models.</p>
+    </div>
+
+    <div class="card">
+      <h3>Autism Detection in Toddlers</h3>
+      <p>Built a machine learning model to detect early signs of autism in toddlers using behavioral and clinical data.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: ronithreddy2205@gmail.com</p>
+  <p>GitHub: https://github.com/Ronith2205/yourprofile</p>
+  <p>LinkedIn: https://www.linkedin.com/in/ronith-reddy-revuri-75290a314//in/yourprofile</p>
+</section>
+
+<footer>
+  <p>© 2026 Ronith Reddy | AI & ML Portfolio</p>
+</footer>
+
+<script>
+  function scrollToSection() {
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+  }
+
+  const sections = document.querySelectorAll("section");
+
+  window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+      const top = window.scrollY;
+      const offset = sec.offsetTop - 200;
+      const height = sec.offsetHeight;
+
+      if (top > offset && top < offset + height) {
+        sec.classList.add("show");
+      }
+    });
+  });
+
+  // Typing Animation
+  const text = ["AI & ML Enthusiast", "Java & Python Developer", ];
+  let i = 0, j = 0, current = "", isDeleting = false;
+
+  function type() {
+    current = text[i];
+
+    if (isDeleting) {
+      j--;
+    } else {
+      j++;
+    }
+
+    document.getElementById("typing").textContent = current.substring(0, j);
+
+    if (!isDeleting && j === current.length) {
+      isDeleting = true;
+      setTimeout(type, 1000);
+      return;
+    }
+
+    if (isDeleting && j === 0) {
+      isDeleting = false;
+      i = (i + 1) % text.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+
+  type();
+</script>
+
+</body>
+</html>
